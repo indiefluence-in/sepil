@@ -1959,7 +1959,8 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
 }
 
 .instagram_header-title {
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    margin-top: 20px;
 }
 
 .instagram_header-text {

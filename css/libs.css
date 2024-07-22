@@ -7100,7 +7100,8 @@
     overflow: hidden;
     list-style: none;
     padding: 0;
-    z-index: 1
+    z-index: 1;
+    margin-bottom: 50px;
 }
 
 .swiper-vertical>.swiper-wrapper {
@@ -7132,7 +7133,8 @@
 
 .swiper-pointer-events {
     -ms-touch-action: pan-y;
-    touch-action: pan-y
+    touch-action: pan-y;
+    margin-bottom: 50px;
 }
 
 .swiper-pointer-events.swiper-vertical {
