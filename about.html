@@ -71,128 +71,34 @@
                     <span>list</span>
                 </a>
                 <nav class="header_nav">
-                    <ul class="header_nav-list">
-                        <li class="header_nav-list_item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle d-inline-flex align-items-center"
-                                href="#"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#homeMenu"
-                                aria-expanded="false"
-                                aria-controls="homeMenu"
-                            >
-                                Home
-                                <i class="icon-caret_down icon"></i>
-                            </a>
-                            <div class="dropdown-menu collapse" id="homeMenu">
-                                <ul class="dropdown-list">
-                                    <li class="list-item nav-item" data-page="home">
-                                        <a class="dropdown-item" href="index.html">Home 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="home2">
-                                        <a class="dropdown-item" href="index2.html">Home 02</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header_nav-list_item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle d-inline-flex align-items-center"
-                                href="#"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#shopMenu"
-                                aria-expanded="false"
-                                aria-controls="shopMenu"
-                            >
-                                Shop
-                                <i class="icon-caret_down icon"></i>
-                            </a>
-                            <div class="dropdown-menu collapse" id="shopMenu">
-                                <ul class="dropdown-list">
-                                    <li class="list-item nav-item" data-page="shop">
-                                        <a class="dropdown-item" href="shop.html">Shop 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="shop2">
-                                        <a class="dropdown-item" href="shop2.html">Shop 02</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="product">
-                                        <a class="dropdown-item" href="product.html">Single Product 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="product2">
-                                        <a class="dropdown-item" href="product2.html">Single Product 02</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="compare">
-                                        <a class="dropdown-item" href="compare.html">Compare List</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header_nav-list_item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle d-inline-flex align-items-center"
-                                href="#"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#newsMenu"
-                                aria-expanded="false"
-                                aria-controls="newsMenu"
-                            >
-                                News
-                                <i class="icon-caret_down icon"></i>
-                            </a>
-                            <div class="dropdown-menu collapse" id="newsMenu">
-                                <ul class="dropdown-list">
-                                    <li class="list-item nav-item" data-page="news">
-                                        <a class="dropdown-item" href="news.html">News 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="news2">
-                                        <a class="dropdown-item" href="news2.html">News 02</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="post">
-                                        <a class="dropdown-item" href="post.html">Single Post 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="post2">
-                                        <a class="dropdown-item" href="post2.html">Single Post 02</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="header_nav-list_item dropdown">
-                            <a
-                                class="nav-link dropdown-toggle d-inline-flex align-items-center"
-                                href="#"
-                                data-bs-toggle="collapse"
-                                data-bs-target="#pagesMenu"
-                                aria-expanded="false"
-                                aria-controls="pagesMenu"
-                            >
-                                Pages
-                                <i class="icon-caret_down icon"></i>
-                            </a>
-                            <div class="dropdown-menu collapse" id="pagesMenu">
-                                <ul class="dropdown-list">
-                                    <li class="list-item nav-item" data-page="about">
-                                        <a class="dropdown-item" href="about.html">About</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="team">
-                                        <a class="dropdown-item" href="team.html">Team</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="faq">
-                                        <a class="dropdown-item" href="faq.html">FAQ</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="contacts">
-                                        <a class="dropdown-item" href="contacts.html">Contacts 01</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="contacts2">
-                                        <a class="dropdown-item" href="contacts2.html">Contacts 02</a>
-                                    </li>
-                                    <li class="list-item nav-item" data-page="404">
-                                        <a class="dropdown-item" href="404.html">Error Page</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+    <ul class="header_nav-list">
+        <!-- Single About Page -->
+        <li class="header_nav-list_item">
+            <a class="nav-link d-inline-flex align-items-center" href="about.html">
+                About
+            </a>
+        </li>
+        <!-- Shop Page without Dropdown -->
+        <li class="header_nav-list_item">
+            <a class="nav-link d-inline-flex align-items-center" href="shop.html">
+                Shop
+            </a>
+        </li>
+        <!-- Reviews Page (404 Error Page Link) -->
+        <li class="header_nav-list_item">
+            <a class="nav-link d-inline-flex align-items-center" href="404.html">
+                Reviews
+            </a>
+        </li>
+        <!-- Contact Us Page -->
+        <li class="header_nav-list_item">
+            <a class="nav-link d-inline-flex align-items-center" href="contacts.html">
+                Contact Us
+            </a>
+        </li>
+    </ul>
+</nav>
+
                 <span class="header_trigger d-inline-flex d-xl-none flex-column justify-content-between">
                     <span class="line line--short"></span>
                     <span class="line line"></span>
@@ -827,7 +733,7 @@
                 <!-- Latest posts section start -->
                 <section class="latest section">
                     <div class="container">
-                        <h2 class="latest_header">Latest Posts</h2>
+                        <h2 class="latest_header">Awards</h2>
                         <ul class="latest_posts d-md-flex flex-wrap">
                             <li class="latest_posts-post col-md-6 col-xl-4" data-order="1" data-aos="fade-up">
                                 <div class="latest_posts-post_wrapper">
@@ -932,12 +838,8 @@
             <!-- Sale section start -->
             <section class="sale section--nopb">
                 <div class="container">
+                    <h2 class="latest_header">Publications</h2>
                     <div class="sale_grid d-grid">
-                        <div class="sale_header">
-                            <h2 class="sale_header-title">Buy Herbalist Product for Sale Online in 2021</h2>
-                            <p class="sale_header-text">Two free samples with any order when you spend $50</p>
-                            <a class="sale_header-btn btn" href="shop.html">Shop Now</a>
-                        </div>
                         <div class="sale_grid-item sale_grid-item--pm">
                             <div class="sale_grid-item_bg">
                                 <picture>
@@ -992,7 +894,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="sale_grid-item sale_grid-item--weekly">
+                        <!-- <div class="sale_grid-item sale_grid-item--weekly">
                             <div class="sale_grid-item_bg">
                                 <picture>
                                     <source
@@ -1009,7 +911,7 @@
                                 <h3 class="sale_grid-item_title">Weekly Special <span class="linebreak">CBD Products</span></h3>
                                 <a class="btn--underline" href="shop.html">Shop now</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </section>
@@ -1141,11 +1043,73 @@
                 </div>
             </section>
             <!-- Guide section end -->
+            <section class="sale section--nopb">
+                <div class="container">
+                    <h2 class="latest_header">Chemical Studies</h2>
+                    <div class="sale_grid d-grid">
+                        
+                        <div class="sale_grid-item sale_grid-item--pm">
+                            <div class="sale_grid-item_bg">
+                                <picture>
+                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" type="image/webp" />
+                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                </picture>
+                            </div>
+                            <div class="sale_grid-item_content d-flex flex-column justify-content-end">
+                                <h3 class="sale_grid-item_title">PM Happy Hour</h3>
+                                <div class="wrapper d-flex flex-column">
+                                    <span class="text">Sale up to 5%</span>
+                                    <a class="btn--underline" href="shop.html">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sale_grid-item sale_grid-item--am">
+                            <div class="sale_grid-item_bg">
+                                <picture>
+                                    <source data-srcset="img/placeholder.jpg" srcset="img/placeholder.jpg" type="image/webp" />
+                                    <img class="lazy" data-src="img/placeholder.jpg" src="img/placeholder.jpg" alt="media" />
+                                </picture>
+                            </div>
+                            <div class="sale_grid-item_content d-flex flex-column justify-content-end">
+                                <h3 class="sale_grid-item_title">AM Happy Hour</h3>
+                                <div class="wrapper d-flex flex-column">
+                                    <span class="text">Sale up to 15%</span>
+                                    <a class="btn--underline" href="shop.html">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="sale_grid-item sale_grid-item--medical">
+                            <div class="sale_grid-item_bg">
+                                <picture>
+                                    <source
+                                        data-srcset="img/placeholder.jpg"
+                                        srcset="img/placeholder.jpg"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        class="lazy"
+                                        data-src="img/placeholder.jpg"
+                                        src="img/placeholder.jpg"
+                                        alt="media"
+                                    />
+                                </picture>
+                            </div>
+                            <div class="sale_grid-item_content d-flex flex-column justify-content-end">
+                                <h3 class="sale_grid-item_title">Medical Special</h3>
+                                <div class="wrapper d-flex flex-column">
+                                    <span class="text">Sale up to 20%</span>
+                                    <a class="btn--underline" href="shop.html">Shop now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             
             <!-- Team section end -->
         
             <!-- Instagram section start -->
-            <section class="instagram section--nopt">
+            <!-- <section class="instagram section--nopt">
                 <div class="container">
                     <div class="instagram_header">
                         <h2 class="instagram_header-title">Follow Us on Instagram</h2>
@@ -1213,7 +1177,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- Instagram section end -->
         </main>
         <!-- About content end -->
