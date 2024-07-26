@@ -10,6 +10,7 @@ import './style/index.min.css';
 import './style/icomoon.css';
 import './style/index2.min.css';
 import './style/about.min.css';
+import './style/header.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
