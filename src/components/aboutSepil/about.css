@@ -1,0 +1,107 @@
+/* about.css */
+
+.about {
+    padding: 60px 0;
+    background: #fff;
+  }
+  
+  .about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .about_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+  
+  .about_main-content {
+    flex: 1;
+    margin-bottom: 30px;
+  }
+  
+  .about_main-content_header {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .about_main-content_text {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+  .about_main-media {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .about_main-media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .about_numbers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .about_numbers-group {
+    flex: 1;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .about_numbers-group .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .number {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #28a745;
+  }
+  
+  .number-label {
+    font-size: 1rem;
+    color: #666;
+    margin-top: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .about_main-content {
+      max-width: 50%;
+    }
+    .about_main-media {
+      max-width: 50%;
+    }
+    .about_numbers-group {
+      max-width: 25%;
+      padding: 20px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .about_main-content_header {
+      font-size: 2.5rem;
+    }
+    .about_main-content_text {
+      font-size: 1.5rem;
+    }
+    .number {
+      font-size: 2.5rem;
+    }
+    .number-label {
+      font-size: 1.2rem;
+    }
+  }
+  

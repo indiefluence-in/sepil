@@ -1,0 +1,152 @@
+/* styles.css */
+
+/* Effects Section */
+.effects {
+    padding: 60px 0;
+    background: #f9f9f9;
+    position: relative;
+  }
+  
+  .effects_underlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .effects_underlay-circle {
+    position: absolute;
+    border-radius: 50%;
+  }
+  
+  .effects_underlay-circle--accent {
+    width: 100px;
+    height: 100px;
+    background-color: #efc368;
+    top: 20px;
+    left: 20px;
+  }
+  
+  .effects_underlay-circle--green {
+    width: 150px;
+    height: 150px;
+    background-color: #258f67;
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .effects .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  
+  .effects_header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  
+  .effects_header-title {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .effects_header-text {
+    font-size: 1.2rem;
+    color: #666;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .effects_header-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  
+  .effects_header-formula svg {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .effects_media {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .effects_media img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .effects_list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .effects_list-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .effects_list-item .icon {
+    color: #007bff;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .effects_list-item .wrapper {
+    text-align: center;
+  }
+  
+  .effects_list-item_header {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .effects_list-item_text {
+    font-size: 1rem;
+    color: #666;
+    margin: 0;
+  }
+  
+  @media (min-width: 768px) {
+    .effects_header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .effects_header .main,
+    .effects_header-formula {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .effects_list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .effects_list-item {
+      flex-direction: row;
+      align-items: flex-start;
+    }
+    .effects_list-item .icon {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
+  }
+  
