@@ -1,6 +1,6 @@
 import React from 'react';
 import HeroSection from '../components/hero-section/heroSection';
-import Categories from "../components/categories/categories"
+import Categories from '../components/categories/Categories';
 import FeaturedSection from '../components/featured/featured';
 import AboutSection from '../components/aboutSepil/aboutsepil';
 import ProductSection from '../components/producthome/producthome';
