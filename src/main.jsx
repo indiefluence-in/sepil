@@ -9,6 +9,8 @@ import './style/libs.css';
 import './style/index.css';
 import './style/icomoon.css';
 import './style/header.css';
+import './style/footer.css';
+import './style/contacts.css';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(

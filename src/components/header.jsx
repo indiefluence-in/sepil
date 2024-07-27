@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../assets/img/logo.png';
 
 export default function Header() {
     const [isPinned, setIsPinned] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const header = document.querySelector('.header');
@@ -12,6 +15,7 @@ export default function Header() {
         const dropdownElems = document.querySelectorAll('.dropdown');
         const triggers = document.querySelectorAll('.dropdown-toggle');
         const menuLists = document.querySelectorAll('.dropdown-menu');
+        const links = document.querySelectorAll('.header_nav-list_item a');
 
         const handleScroll = () => {
             if (window.scrollY < lastScrollY) {
@@ -27,6 +31,7 @@ export default function Header() {
             menu.classList.toggle('active');
             header.classList.add('sticky', 'opened');
             document.documentElement.classList.toggle('fixed');
+            setIsMenuOpen(!isMenuOpen);
         };
 
         const closeMenu = () => {
@@ -34,13 +39,17 @@ export default function Header() {
             menu.classList.remove('active');
             header.classList.remove('opened');
             document.documentElement.classList.remove('fixed');
+            setIsMenuOpen(false);
         };
 
         const setActivePageClass = () => {
             const menuListItems = document.querySelectorAll('.header_nav-list_item');
             menuListItems.forEach((item) => {
-                if (item.querySelector('a').getAttribute('href') === window.location.pathname) {
+                const link = item.querySelector('a');
+                if (link && link.pathname === location.pathname) {
                     item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
                 }
             });
         };
@@ -97,6 +106,7 @@ export default function Header() {
         window.addEventListener('resize', closeMenu);
         window.addEventListener('resize', setDropdownMenu);
         window.addEventListener('scroll', handleScroll);
+        links.forEach((link) => link.addEventListener('click', closeMenu));
 
         setActivePageClass();
         setDropdownMenu();
@@ -107,36 +117,44 @@ export default function Header() {
             window.removeEventListener('resize', closeMenu);
             window.removeEventListener('resize', setDropdownMenu);
             window.removeEventListener('scroll', handleScroll);
+            links.forEach((link) => link.removeEventListener('click', closeMenu));
         };
-    }, [lastScrollY]);
+    }, [lastScrollY, location.pathname]);
 
     return (
         <header className={`header d-flex flex-wrap align-items-center ${isPinned ? 'header--pinned' : 'header--unpinned'}`} data-page="home" data-overlay="true">
             <div className="container d-flex flex-wrap flex-xl-nowrap align-items-center justify-content-between">
-                <a className="brand header_logo d-flex align-items-center" href="index.html">
+                <Link className="brand header_logo d-flex align-items-center" to="/">
                     <img src={logo} alt="Logo" className="logo" />
-                </a>
+                </Link>
                 <nav className="header_nav">
                     <ul className="header_nav-list">
+                        {isMenuOpen && (
+                            <li className="header_nav-list_item">
+                                <Link className="nav-link d-inline-flex align-items-center" to="/">
+                                    Home
+                                </Link>
+                            </li>
+                        )}
                         <li className="header_nav-list_item">
-                            <a className="nav-link d-inline-flex align-items-center" href="about.html">
+                            <Link className="nav-link d-inline-flex align-items-center" to="/about">
                                 About
-                            </a>
+                            </Link>
                         </li>
                         <li className="header_nav-list_item">
-                            <a className="nav-link d-inline-flex align-items-center" href="shop.html">
+                            <Link className="nav-link d-inline-flex align-items-center" to="/shop">
                                 Shop
-                            </a>
+                            </Link>
                         </li>
                         <li className="header_nav-list_item">
-                            <a className="nav-link d-inline-flex align-items-center" href="review.html">
+                            <Link className="nav-link d-inline-flex align-items-center" to="/review">
                                 Reviews
-                            </a>
+                            </Link>
                         </li>
                         <li className="header_nav-list_item">
-                            <a className="nav-link d-inline-flex align-items-center" href="contacts.html">
+                            <Link className="nav-link d-inline-flex align-items-center" to="/contacts">
                                 Contact Us
-                            </a>
+                            </Link>
                         </li>
                     </ul>
                 </nav>
@@ -158,17 +176,17 @@ export default function Header() {
                             <i className="icon-search"></i>
                         </button>
                     </form>
-                    <a className="header_user-action d-inline-flex align-items-center justify-content-center" href="wishlist.html">
+                    <Link className="header_user-action d-inline-flex align-items-center justify-content-center" to="/wishlist">
                         <i className="icon-heart"></i>
-                    </a>
-                    <a
+                    </Link>
+                    <Link
                         className="header_user-action d-inline-flex align-items-center justify-content-center"
                         data-bs-toggle="offcanvas"
                         data-bs-target="#cartOffcanvas"
                         aria-controls="cartOffcanvas"
                     >
                         <i className="icon-basket"></i>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </header>

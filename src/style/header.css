@@ -51,6 +51,7 @@
 .header_nav.active {
     height: 100vh;
     padding-top: 30px;
+    padding-left: 15px;
     overflow-y: scroll;
     box-shadow: 0 30px 15px rgba(37, 143, 103, .07);
 }
