@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
+import './styles.css'; 
 
 const HeroSection = () => {
   useEffect(() => {
@@ -67,7 +68,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="hero">
+    <section className="hero h">
       <div className="container d-xl-flex align-items-start">
         <div className="hero_about col-xl-6">
           <div className="hero_header">
