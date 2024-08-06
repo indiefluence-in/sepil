@@ -1,74 +1,33 @@
 import React, { useEffect } from 'react';
 import Swiper from 'swiper/bundle';
 import 'swiper/swiper-bundle.css';
-import './styles.css'; 
+import './hero-styles.css';
 
 const HeroSection = () => {
   useEffect(() => {
-    const setPromoPadding = () => {
-      const containerEl = document.querySelector('.container');
-      const promoEl = document.querySelector('.promo_fluid');
-      const offset = parseFloat(getComputedStyle(containerEl).marginLeft) + parseFloat(getComputedStyle(containerEl).paddingLeft);
-
-      if (promoEl) {
-        promoEl.style.paddingLeft = promoEl.style.paddingRight = window.innerWidth >= 1400 ? `${offset}px` : '';
-      }
-    };
-
-    const initSwiperSlider = (container, options) => {
-      const containerEl = document.querySelector(container);
-      if (containerEl) {
-        new Swiper(container, {
-          disableOnInteraction: true,
-          pauseOnMouseEnter: true,
-          keyboard: {
-            enabled: true,
-            onlyInViewport: false,
-          },
-          navigation: true,
-          ...options,
-        });
-      }
-    };
-
-    const generateNumericPagination = (parent) => {
-      document.querySelectorAll(`${parent} .swiper-pagination-bullet`).forEach((el, i) => {
-        el.textContent = i < 9 ? `0${i + 1}` : `${i + 1}`;
-      });
-    };
-
-    const resizeHandler = () => {
-      setPromoPadding();
-    };
-
-    window.addEventListener('resize', resizeHandler);
-    setPromoPadding();
-
-    initSwiperSlider('.hero_slider', {
+    const swiper = new Swiper('.swiper', {
       slidesPerView: 1,
       loop: true,
       autoplay: {
         delay: 3000,
         disableOnInteraction: false,
       },
-      speed: 800,
-      effect: 'fade',
-      fadeEffect: { crossFade: true },
       pagination: {
         el: '.hero-pagination',
         clickable: true,
+        renderBullet: (index, className) => `<span class="${className}">${index + 1}</span>`,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
     });
 
-    generateNumericPagination('.hero-pagination');
-
-    return () => {
-      window.removeEventListener('resize', resizeHandler);
-    };
+    return () => swiper.destroy();
   }, []);
 
   return (
-    <section className="hero h">
+    <section className="hero">
       <div className="container d-xl-flex align-items-start">
         <div className="hero_about col-xl-6">
           <div className="hero_header">
@@ -123,60 +82,7 @@ const HeroSection = () => {
                   <a className="btn--underline" href="#">About Product</a>
                 </div>
               </div>
-              <div className="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
-                <div className="hero_slider-slide_media">
-                  <picture>
-                    <source srcSet="img/placeholder.jpg" type="image/webp" />
-                    <img src="img/placeholder.jpg" alt="media" />
-                  </picture>
-                </div>
-                <div className="hero_slider-slide_main">
-                  <h2 className="title">Sepil Plus</h2>
-                  <p className="text">Enhanced formula for advanced needs</p>
-                  <ul className="list">
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      Enhanced Solution
-                    </li>
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      Dosage: 75-150mg
-                    </li>
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      For Advanced Use
-                    </li>
-                  </ul>
-                  <a className="btn--underline" href="#">About Product</a>
-                </div>
-              </div>
-              <div className="hero_slider-slide d-flex flex-column flex-md-row justify-content-between justify-content-md-start align-items-md-center swiper-slide">
-                <div className="hero_slider-slide_media">
-                  <picture>
-                    <source srcSet="img/placeholder.jpg" type="image/webp" />
-                    <img src="img/placeholder.jpg" alt="media" />
-                  </picture>
-                </div>
-                <div className="hero_slider-slide_main">
-                  <h2 className="title">Sepilvet</h2>
-                  <p className="text">Veterinary-specific formulation</p>
-                  <ul className="list">
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      Veterinary Solution
-                    </li>
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      Dosage: 50-100mg
-                    </li>
-                    <li className="list-item d-flex align-items-center justify-content-center justify-content-sm-start">
-                      <span className="icon d-flex align-items-center justify-content-center"><i className="icon-check"></i></span>
-                      For Veterinary Use
-                    </li>
-                  </ul>
-                  <a className="btn--underline" href="#">About Product</a>
-                </div>
-              </div>
+              {/* Additional slides for Sepil Plus and Sepilvet can be similarly added */}
             </div>
             <div className="hero-pagination swiper-pagination d-sm-flex flex-column"></div>
           </div>

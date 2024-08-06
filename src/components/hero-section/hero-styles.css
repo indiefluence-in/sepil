@@ -1,0 +1,105 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  margin: 20px; /* General margin around the hero section */
+  box-sizing: border-box; /* Include padding and border in the width and height */
+}
+
+.hero_content {
+  display: flex;
+  width: calc(100% - 40px); /* Adjust width based on the hero margin */
+  max-width: 1200px; /* Adjust based on your design requirements */
+  height: calc(100% - 40px); /* Adjust height based on the hero margin */
+  flex-wrap: wrap; /* Ensures content wraps on smaller screens */
+}
+
+.hero_about {
+  width: 50%;
+  background-color: #f8f9fa; /* Light background for the text section */
+  padding: 20px;
+  box-sizing: border-box;
+  color: #080000;
+}
+
+.hero_about h1, .hero_about p, .hero_about a {
+  margin: px 0;
+}
+
+.hero_about a {
+  margin-bottom: 30px;
+  color: #090000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero_contacts {
+  font-size: 0.9rem;
+}
+
+.hero_promo {
+  width: 50%;
+  background-color: #004d40; /* Dark green background */
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.slide-content {
+  text-align: center;
+}
+
+.slide-content h2 {
+  font-size: 2rem;
+}
+
+.slide-content p {
+  margin: 10px 0;
+}
+
+.slide-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.slide-content li {
+  padding: 5px 0;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    margin: 10px; /* Smaller margin for smaller devices */
+    height: auto; /* Adjust height for better mobile experience */
+  }
+
+  .hero_content {
+    flex-direction: column;
+    width: calc(100% - 20px); /* Adjust width based on the hero margin */
+    height: auto; /* Allow natural height on smaller screens */
+  }
+
+  .hero_about, .hero_promo {
+    width: 100%;
+    padding: 15px; /* Slightly reduced padding on smaller screens */
+  }
+}

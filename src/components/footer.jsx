@@ -1,5 +1,6 @@
 import React from 'react';
 import Plasce from '../assets/img/placeholder.jpg';
+import './footerstyle.css'
 
 export default function Footer() {
   return (
@@ -10,11 +11,12 @@ export default function Footer() {
             <div className="footer_main-about footer_main-block col-md-6 col-xl-auto">
               <a className="brand footer_main-about_brand d-flex align-items-center" href="index.html">
 
-                <span className="accent">Sepil</span>
+              <span className="accent logo-name" style={{ marginTop: '20px',marginLeft:'px' }}>Sepil</span>
+
 
               </a>
               <div className="footer_main-about_wrapper">
-                <p className="text">
+                <p className="text" style={{color:'white'}}>
                   An advanced wound healing agent effective against infections like MRSA, promoting faster recovery.
                 </p>
                 <ul className="socials d-flex align-items-center accent">

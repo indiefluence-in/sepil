@@ -1,0 +1,11 @@
+.logo-name{
+    margin-left: 0px;
+    margin-top: 20px;
+}
+@media(min-width: 767px)
+{
+    .logo-name{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+}

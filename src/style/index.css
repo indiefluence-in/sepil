@@ -568,11 +568,12 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
 }
 
 .hero_header {
-    margin-bottom: 60px
+  
 }
 
 .hero_header-text {
-    margin: 15px 0 30px
+    margin: 15px 0 30px;
+    color: #258f67;
 }
 
 .hero_contacts-text {
@@ -599,7 +600,7 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
     width: 40px;
     height: 40px;
     font-size: 20px;
-    margin-bottom: 15px;
+   
     -webkit-transition: .3s ease-in-out;
     -o-transition: .3s ease-in-out;
     transition: .3s ease-in-out
@@ -608,7 +609,7 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
 .hero_contacts-data .link {
     font-family: NunitoSans,sans-serif;
     font-weight: 700;
-    color: #214842
+    color: #0c0000
 }
 
 .hero_promo {
@@ -619,10 +620,9 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
 .hero_promo-underlay {
     display: block;
     position: absolute;
-    width: 10000px;
-    height: 10000px;
+    width: 100%;
+    height: 100%;
     margin: 0 -1000px;
-    background: #214842;
     left: 0
 }
 
@@ -709,7 +709,8 @@ a[href^="http://maps.google.com/maps"],a[href^="https://maps.google.com/maps"] {
     }
 
     .hero_contacts-text {
-        margin: 0 0 15px
+        color:#258f67;
+        margin: 25px 0 25px
     }
 
     .hero_contacts-data .icon {

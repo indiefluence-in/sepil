@@ -205,7 +205,7 @@
 
 @media screen and (min-width: 1199.98px) {
     .header {
-        height: 140px;
+        height: 100px;
         transition: transform .5s ease-in-out, height .3s ease-in, background-color .2s;
     }
 

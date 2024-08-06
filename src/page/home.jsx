@@ -13,12 +13,12 @@ export default function Home() {
     <>
       <main>
         <HeroSection />
-        <Categories/>
+        {/* <Categories/>
         <FeaturedSection/>
         <AboutSection/>
         <Sections/>
         <EffectsSection/>
-        <ReviewsSection/>
+        <ReviewsSection/> */}
       
       </main>
     </>
